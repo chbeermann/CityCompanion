@@ -65,7 +65,7 @@ param chatGptDeploymentCapacity int = 240
 param chunkTargetSize string = '750'
 param targetPages string = 'ALL'
 param formRecognizerApiVersion string = '2023-07-31'
-param queryTermLanguage string = 'English'
+param queryTermLanguage string = 'German'
 param isGovCloudDeployment bool = contains(location, 'usgov')
 
 // This block of variables are used by the enrichment pipeline
@@ -107,8 +107,8 @@ param principalId string = ''
 param kvAccessObjectId string = ''
 
 var abbrs = loadJsonContent('abbreviations.json')
-var tags = { ProjectName: 'Information Assistant', BuildNumber: buildNumber }
-var prefix = 'infoasst'
+var tags = { ProjectName: 'CityCompanion', BuildNumber: buildNumber }
+var prefix = 'citycompanion'
 
 // Organize resources in a resource group
 resource rg 'Microsoft.Resources/resourceGroups@2021-04-01' = {
